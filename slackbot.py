@@ -1,11 +1,7 @@
 #!env/bin/python
 
 from slackclient import SlackClient
-from importlib import import_module
-from time import sleep
 import config
-import os
-
 
 class Bot():
     def __init__(self):
