@@ -15,13 +15,15 @@ class Buttonbot():
             print("Slack connection failed")
 
 class ModHandler(pyinotify.ProcessEvent):
-    # evt has useful properties, including pathname
     def process_IN_CLOSE_WRITE(self, evt):
-        buttonbot.bot.emoji(":wolf:")
+        fileHandle = open("log.txt", "r")
+        lineList = fileHandle.readlines()
+        fileHandle.close()
+        buttonbot.bot.emoji(lineList[-1])
 
 buttonbot = Buttonbot()
 handler = ModHandler()
 wm = pyinotify.WatchManager()
 notifier = pyinotify.Notifier(wm, handler)
-wdd = wm.add_watch('log.txt', pyinotify.IN_CLOSE_WRITE)
+wdd = wm.add_watch("log.txt", pyinotify.IN_CLOSE_WRITE)
 notifier.loop()
