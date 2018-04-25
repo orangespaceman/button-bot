@@ -1,0 +1,10 @@
+Description=Buttonbot
+
+[Service]
+ExecStart=/bin/bash -c '/usr/bin/python -u buttonbot.py'
+WorkingDirectory=/home/pi/button-bot
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
