@@ -27,7 +27,7 @@ class Bot():
         self.sc.api_call(
             "chat.postMessage",
             channel=self.channel,
-            text="_%s_" % emoji,
+            text="%s" % emoji,
             as_user=self.bot_user
         )
 
