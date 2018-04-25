@@ -4,3 +4,4 @@ env/
 resources/
 deploy.sh
 config.py
+log.txt
