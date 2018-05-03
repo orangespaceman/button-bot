@@ -1,5 +1,6 @@
 import config
 import pyinotify
+import random
 
 from slackbot import Bot
 
@@ -20,6 +21,8 @@ class ModHandler(pyinotify.ProcessEvent):
         lineList = fileHandle.readlines()
         fileHandle.close()
         emoji = lineList[-1].strip()
+        if emoji == ':random:'
+            emoji = random.choice(list(open('random.txt')))
         buttonbot.bot.emoji(emoji)
         if emoji == ':hal_9000:':
             buttonbot.bot.message('toggle')
