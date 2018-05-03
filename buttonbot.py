@@ -22,7 +22,7 @@ class ModHandler(pyinotify.ProcessEvent):
         emoji = lineList[-1].strip()
         buttonbot.bot.emoji(emoji)
         if emoji == ':hal_9000:':
-            buttonbot.bot.message('playpause')
+            buttonbot.bot.message('toggle')
 
 buttonbot = Buttonbot()
 handler = ModHandler()
