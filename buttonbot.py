@@ -21,7 +21,7 @@ class ModHandler(pyinotify.ProcessEvent):
         lineList = fileHandle.readlines()
         fileHandle.close()
         emoji = lineList[-1].strip()
-        if emoji == ':random:'
+        if emoji == ':random:':
             emoji = random.choice(list(open('/home/pi/button-bot/random.txt')))
         buttonbot.bot.emoji(emoji)
         if emoji == ':hal_9000:':
