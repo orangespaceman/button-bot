@@ -19,7 +19,10 @@ class ModHandler(pyinotify.ProcessEvent):
         fileHandle = open("log.txt", "r")
         lineList = fileHandle.readlines()
         fileHandle.close()
-        buttonbot.bot.emoji(lineList[-1])
+        emoji = lineList[-1]
+        buttonbot.bot.emoji(emoji)
+        if emoji == ':hal_9000:':
+            buttonbot.bot.message('playpause')
 
 buttonbot = Buttonbot()
 handler = ModHandler()
