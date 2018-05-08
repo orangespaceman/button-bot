@@ -1,4 +1,5 @@
 :airhorn:
+:angry:
 :apple:
 :awkward:
 :bat:
@@ -62,6 +63,7 @@
 :point_up:
 :poodle:
 :punch:
+:rage:
 :rocket:
 :rockhand:
 :runner:
