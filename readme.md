@@ -1,6 +1,6 @@
 # Button bot
 
-Use a Raspberry Pi to detect interactions with the [buttons](https://github.com/thegingerbloke/button-basher) and send them through to our [Slack awkbot](https://github.com/thegingerbloke/awkbot-slack)
+Use a Raspberry Pi to detect interactions with the [buttons](https://github.com/orangespaceman/button-basher) and send them through to a [Slack awkbot](https://github.com/orangespaceman/awkbot-slack)
 
 
 ## Installation
